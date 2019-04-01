@@ -10,37 +10,37 @@
       </div>
       <br>
       <br>
-      <div class="container">
-        <div class="columns is-multiline">
-
-          <div class="column is-one-quarter" v-for="city in cities" :key="city.id">
-
-            <div class="card">
-             <div class="card-image has-text-centered">
-                <figure class="image is-3by2">
-                  <img :src="'cities/' + city.name + '.jpg'" :alt="city.name">
-                </figure>
-                <div class="card-content is-overlay is-clipped is-center">
-                  <p class="title is-1 has-text-white">{{city.votes}}</p>  
-                </div>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4">{{city.name}}</p>
-                    <p class="subtitle is-6">{{city.country.name}}</p>
+      <no-ssr>
+        <div class="container">
+          <div class="columns is-multiline">
+            <div class="column is-one-quarter" v-for="city in cities" :key="city.id">
+              <div class="card">
+                <div class="card-image has-text-centered">
+                    <figure class="image is-3by2">
+                      <img :src="'cities/' + city.name + '.jpg'" :alt="city.name">
+                    </figure>
+                    <div class="card-content is-overlay is-clipped is-center">
+                    <p class="title is-1 has-text-white">{{city.votes}}</p>  
                   </div>
                 </div>
-                
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <p class="title is-4">{{city.name}}</p>
+                      <p class="subtitle is-6">{{city.country.name}}</p>
+                    </div>
+                  </div>
+                  
+                </div>
+                <footer class="card-footer">
+                  <button class="button is-success is-fullwidth">VOTE FOR {{city.name}}</button>
+                </footer> 
               </div>
-              <footer class="card-footer">
-                <button class="button is-success is-fullwidth">VOTE FOR {{city.name}}</button>
-              </footer> 
-            </div>
 
+            </div>
           </div>
         </div>
-      </div>
+      </no-ssr>
     </section>
 
 </template>

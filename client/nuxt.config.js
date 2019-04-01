@@ -43,7 +43,8 @@ export default {
   */
   modules: [
     'nuxt-buefy',
-    '@nuxtjs/apollo'
+    '@nuxtjs/apollo',
+    'nuxt-leaflet',
   ],
   apollo: {
     clientConfigs: {
